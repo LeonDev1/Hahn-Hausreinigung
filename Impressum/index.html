@@ -7,8 +7,27 @@
     <title>Impressum</title>
     <link rel="stylesheet" href="../css/hero-section.css" />
   </head>
-  <body style="display: flex; justify-content: center">
-    <div class="navbar simple-shadow" style="width: auto; min-width: 100px">
+
+  <body>
+    <style>
+      .back-home-nav {
+        position: fixed;
+        top: 10px;
+        border-radius: 10px;
+        background: var(--light-grey);
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 200ms ease;
+      }
+
+      .back-home-nav:hover {
+        opacity: 0.7;
+      }
+    </style>
+
+    <div class="back-home-nav simple-shadow" style="min-width: 100px">
       <div class="star"></div>
       <!-- <img src="" alt="Hahn Hausreinigung Logo" /> -->
       <a href="../index.html">Home</a>
@@ -134,6 +153,8 @@
 
 <style>
   body {
+    display: flex;
+    justify-content: center;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #000000;
