@@ -1,0 +1,98 @@
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navbar {
+  width: 65%;
+  max-width: 800px;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  top: 10px;
+  padding: 10px 5% 10px 5%;
+  border-radius: 7px;
+  background-color: var(--light-grey);
+}
+
+.middle-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.middle-text h1 {
+  line-height: 0.8;
+}
+
+.middle-text h3 {
+  margin-top: 50px;
+}
+
+.cross-background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+  background-color: #ffffff;
+  opacity: 0.3;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #ffffff 20%,
+      #ffffff 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #ffffff 20%,
+        #ffffff 80%,
+        transparent 80%,
+        transparent
+      )
+      42.5px 42.5px,
+    linear-gradient(
+        #da4d4d 3.4000000000000004px,
+        transparent 3.4000000000000004px
+      )
+      0 -1.7000000000000002px,
+    linear-gradient(
+        90deg,
+        #da4d4d 3.4000000000000004px,
+        #ffffff 3.4000000000000004px
+      ) -1.7000000000000002px 0;
+  background-size: 85px 85px, 85px 85px, 42.5px 42.5px, 42.5px 42.5px;
+}
+
+.gradient {
+  height: 25%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* background: #ffffff; */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.star {
+  height: 25px;
+  aspect-ratio: 1;
+  background: var(--primary-color);
+  clip-path: polygon(
+    50% 0,
+    calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+    calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+  );
+}

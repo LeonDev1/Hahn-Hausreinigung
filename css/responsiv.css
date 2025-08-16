@@ -1,0 +1,119 @@
+@media (max-width: 650px) {
+  .middle-text h1 {
+    font-size: 100px;
+  }
+  .middle-text h2 {
+    font-size: 50px;
+  }
+  .middle-text h3 {
+    font-size: 25px;
+  }
+
+  .service:hover {
+    background-color: var(--primary-color-transparent);
+    transform: rotate(-2deg);
+  }
+
+  .service,
+  .review {
+    width: 200px;
+  }
+
+  .service h4,
+  .review h4 {
+    font-size: 130%;
+  }
+
+  #rezensionen h2 {
+    font-size: 45px;
+  }
+
+  .review p {
+    font-size: 20px;
+  }
+}
+
+.ham-menu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navbar a {
+    display: none;
+  }
+
+  .ham-menu {
+    display: block;
+  }
+}
+
+/* 
+    Hamburger Menu
+*/
+
+.off-screen-menu {
+  z-index: 9;
+  background-color: var(--light-grey);
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  position: fixed;
+  top: -100vh;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 300ms ease;
+}
+
+.off-screen-menu.active {
+  top: 0;
+}
+
+.off-screen-menu a {
+  font-size: 40px;
+}
+
+.ham-menu {
+  height: 40px;
+  width: 30px;
+  right: 10%;
+  top: 5px;
+  position: absolute;
+}
+
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
